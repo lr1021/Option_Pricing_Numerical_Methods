@@ -1,0 +1,90 @@
+# Option_Pricing_Numerical_Methods
+
+This repository contains implementations of numerical methods for option pricing, based on **Hull, J. C. (2003).** *Options, Futures, and Other Derivatives* (2nd ed.). Prentice-Hall, specifically Chapter 14: Numerical Methods.
+
+## Table of Contents
+- [Overview](#overview)
+- [Implemented Methods](#implemented-methods)
+- [Dependencies](#dependencies)
+- [Usage](#usage)
+- [References](#references)
+- [License](#license)
+
+## Overview
+
+The purpose of this repository is to provide a practical implementation of various numerical methods for pricing options as described in Chapter 14 of John Hull's textbook *Options, Futures, and Other Derivatives*. These methods are commonly used in the finance industry for valuing derivative securities where analytical solutions may not be available or practical.
+
+### Key Topics:
+- Finite difference methods
+- Binomial trees
+- Monte Carlo simulation
+- Other numerical techniques relevant to option pricing
+
+## Implemented Methods
+
+The following numerical methods have been implemented:
+
+1. **Binomial Option Pricing Model (Cox-Ross-Rubinstein Model)**
+   - A tree-based method to model the evolution of the underlying asset's price and calculate the option price.
+
+2. **Trinomial Option Pricing Model**
+   - An extension of the binomial model that provides more accuracy by considering three possible price movements (up, down, unchanged).
+
+3. **Finite Difference Methods (FDM)**
+   - Techniques to solve partial differential equations (PDEs) related to option pricing, including the explicit, implicit, and Crank-Nicolson methods.
+
+4. **Monte Carlo Simulation**
+   - A stochastic method used to simulate the underlying asset's price paths and calculate the option price by averaging the payoffs.
+
+5. **Other Methods**
+   - Any other methods included from Chapter 14, such as approximations and lattice models, will be documented here.
+
+## Dependencies
+
+To run the code in this repository, you need the following dependencies:
+
+- Python 3.x
+- NumPy
+- Pandas
+- Matplotlib (for plotting results)
+- Jupyter (optional, for running notebooks)
+
+You can install these dependencies using pip:
+
+```bash
+pip install numpy pandas matplotlib jupyter
+```
+
+## Usage
+
+1. **Clone the Repository:**
+
+   ```bash
+   git clone https://github.com/yourusername/Option_Pricing_Numerical_Methods.git
+   cd Option_Pricing_Numerical_Methods
+   ```
+
+2. **Run the Notebooks or Scripts:**
+   - You can explore the Jupyter notebooks provided in the `notebooks/` directory, which contain explanations, code, and examples.
+   - Alternatively, run the Python scripts in the `scripts/` directory for specific implementations.
+
+3. **Customize the Parameters:**
+   - Each method allows for customization of parameters like the number of time steps, volatility, risk-free rate, and more. Modify these parameters as needed within the scripts or notebooks.
+
+## References
+
+- **John C. Hull. (2003).** *Options, Futures, and Other Derivatives* (2nd ed.). Prentice-Hall.
+
+This textbook is a widely recognized reference for derivatives pricing and includes detailed explanations of the numerical methods implemented in this repository.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+### Example Notebooks and Code:
+
+Feel free to explore the provided notebooks that demonstrate how each method can be applied to price European and American options, as well as more complex derivatives.
+
+---
