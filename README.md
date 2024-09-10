@@ -17,9 +17,9 @@ In addition to this, hedge parameters such as delta, gamma, theta, vega and rho 
 
 ### Key Topics:
 - Building Desired Option (To be implemented)
+- Binomial Tree
 - Implicit Finite Difference
 - Explicit Finite Difference (To be implemented)
-- Binomial Trees
 - Monte Carlo Simulation (To be implemented)
 - Hedge Parameter Estimation (To be implemented)
 
@@ -27,14 +27,20 @@ In addition to this, hedge parameters such as delta, gamma, theta, vega and rho 
 
 The following numerical methods have been implemented:
 
-1. **Binomial Option Pricing Model (Cox-Ross-Rubinstein Model)**
-   - A tree-based method to model the evolution of the underlying asset's price and calculate the option price.
+1. **Binomial Option Pricing Model**
+   - A tree-based method to model the evolution of the underlying asset's price and calculate the price of the given option.
 
-2. **Finite Difference Methods (FDM)**
-   - Techniques to solve partial differential equations (PDEs) related to option pricing, including the explicit, implicit, and Crank-Nicolson methods.
+2. **Implicit Finite Difference Method**
+   - A numerical solution to the Black and Scholes differential equation to price
+   the given option.
 
-3. **Monte Carlo Simulation**
-   - A stochastic method used to simulate the underlying asset's price paths and calculate the option price by averaging the payoffs.
+3. **Explicit Finite Difference Method**
+   - A numerical solution to the Black and Scholes differential equation to price
+   the given option with simplified calculation (no inversion of matrices) based on
+   assumption that first and second order partial derivatives of option price with respect to underlying asset price are very similar between adjacent time steps.
+
+4. **Monte Carlo Simulation**
+   - A stochastic method used to simulate the underlying asset's price paths and calculate the price of the given option by taking the average of the final payoffs.
 
 ## Dependencies
 
@@ -67,10 +73,6 @@ To run the code in this repository, you need the following dependencies:
 - **John C. Hull. (2003).** *Options, Futures, and Other Derivatives* (2nd ed.). Prentice-Hall.
 
 This textbook is a widely recognized reference for derivatives pricing and includes detailed explanations of the numerical methods implemented in this repository.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
