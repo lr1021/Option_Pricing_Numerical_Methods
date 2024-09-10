@@ -8,11 +8,10 @@ This repository contains implementations of numerical methods for option pricing
 - [Dependencies](#dependencies)
 - [Usage](#usage)
 - [References](#references)
-- [License](#license)
 
 ## Overview
 
-The purpose of this repository is to provide a practical implementation of various numerical methods for pricing options as described in Chapter 14: Numerical Procedures of John Hull's textbook *Options, Futures, and Other Derivatives*. These methods can be used to value derivative securities where analytical solutions may not be available or practical.
+The purpose of this repository is to provide a practical implementation of various numerical methods for pricing derivatives as described in Chapter 14: Numerical Procedures of John Hull's textbook *Options, Futures, and Other Derivatives*. These methods can be used to value derivative securities where analytical solutions may not be available or practical.
 In addition to this, hedge parameters such as delta, gamma, theta, vega and rho can be estimated using prices obtained numerically (by recomputing the desired option price with a small change in relevant variable) or with procedures specific to the used numerical method.
 
 ### Key Topics:
@@ -23,23 +22,27 @@ In addition to this, hedge parameters such as delta, gamma, theta, vega and rho 
 - Monte Carlo Simulation (To be implemented)
 - Hedge Parameter Estimation (To be implemented)
 
-## Implemented Methods
+## Implemented Classes and Methods
 
-The following numerical methods have been implemented:
+The following have been implemented:
 
-1. **Binomial Option Pricing Model**
+1. **Option Class**
+   - A custom class with assignable payoff function and american style pricing attribute
+   so that a wide variety of derivatives can be considered. Call and Put subclasses are already defined.
+
+2. **Binomial Option Pricing Model**
    - A tree-based method to model the evolution of the underlying asset's price and calculate the price of the given option.
 
-2. **Implicit Finite Difference Method**
+3. **Implicit Finite Difference Method**
    - A numerical solution to the Black and Scholes differential equation to price
    the given option.
 
-3. **Explicit Finite Difference Method**
+4. **Explicit Finite Difference Method (To be implemented)**
    - A numerical solution to the Black and Scholes differential equation to price
    the given option with simplified calculation (no inversion of matrices) based on
    assumption that first and second order partial derivatives of option price with respect to underlying asset price are very similar between adjacent time steps.
 
-4. **Monte Carlo Simulation**
+5. **Monte Carlo Simulation**
    - A stochastic method used to simulate the underlying asset's price paths and calculate the price of the given option by taking the average of the final payoffs.
 
 ## Dependencies
