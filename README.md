@@ -30,9 +30,6 @@ The following numerical methods have been implemented:
 1. **Binomial Option Pricing Model (Cox-Ross-Rubinstein Model)**
    - A tree-based method to model the evolution of the underlying asset's price and calculate the option price.
 
-2. **Trinomial Option Pricing Model**
-   - An extension of the binomial model that provides more accuracy by considering three possible price movements (up, down, unchanged).
-
 3. **Finite Difference Methods (FDM)**
    - Techniques to solve partial differential equations (PDEs) related to option pricing, including the explicit, implicit, and Crank-Nicolson methods.
 
