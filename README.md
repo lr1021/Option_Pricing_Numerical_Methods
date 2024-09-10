@@ -30,14 +30,11 @@ The following numerical methods have been implemented:
 1. **Binomial Option Pricing Model (Cox-Ross-Rubinstein Model)**
    - A tree-based method to model the evolution of the underlying asset's price and calculate the option price.
 
-3. **Finite Difference Methods (FDM)**
+2. **Finite Difference Methods (FDM)**
    - Techniques to solve partial differential equations (PDEs) related to option pricing, including the explicit, implicit, and Crank-Nicolson methods.
 
-4. **Monte Carlo Simulation**
+3. **Monte Carlo Simulation**
    - A stochastic method used to simulate the underlying asset's price paths and calculate the option price by averaging the payoffs.
-
-5. **Other Methods**
-   - Any other methods included from Chapter 14, such as approximations and lattice models, will be documented here.
 
 ## Dependencies
 
