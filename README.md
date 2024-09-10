@@ -1,6 +1,6 @@
 # Option_Pricing_Numerical_Methods
 
-This repository contains implementations of numerical methods for option pricing, based on **Hull, J. C. (2003).** *Options, Futures, and Other Derivatives* (2nd ed.). Prentice-Hall, specifically Chapter 14: Numerical Methods.
+This repository contains implementations of numerical methods for option pricing, based on **Hull, J. C. (2003).** *Options, Futures, and Other Derivatives* (2nd ed.). Prentice-Hall, specifically Chapter 14: Numerical Procedures.
 
 ## Table of Contents
 - [Overview](#overview)
@@ -12,13 +12,16 @@ This repository contains implementations of numerical methods for option pricing
 
 ## Overview
 
-The purpose of this repository is to provide a practical implementation of various numerical methods for pricing options as described in Chapter 14 of John Hull's textbook *Options, Futures, and Other Derivatives*. These methods are commonly used in the finance industry for valuing derivative securities where analytical solutions may not be available or practical.
+The purpose of this repository is to provide a practical implementation of various numerical methods for pricing options as described in Chapter 14: Numerical Procedures of John Hull's textbook *Options, Futures, and Other Derivatives*. These methods can be used to value derivative securities where analytical solutions may not be available or practical.
+In addition to this, hedge parameters such as delta, gamma, theta, vega and rho can be estimated using prices obtained numerically (by recomputing the desired option price with a small change in relevant variable) or with procedures specific to the used numerical method.
 
 ### Key Topics:
-- Finite difference methods
-- Binomial trees
-- Monte Carlo simulation
-- Other numerical techniques relevant to option pricing
+- Building Desired Option (To be implemented)
+- Implicit Finite Difference
+- Explicit Finite Difference (To be implemented)
+- Binomial Trees
+- Monte Carlo Simulation (To be implemented)
+- Hedge Parameter Estimation (To be implemented)
 
 ## Implemented Methods
 
@@ -60,16 +63,16 @@ pip install numpy pandas matplotlib jupyter
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/yourusername/Option_Pricing_Numerical_Methods.git
+   git clone https://github.com/lr1021/Option_Pricing_Numerical_Methods.git
    cd Option_Pricing_Numerical_Methods
    ```
 
 2. **Run the Notebooks or Scripts:**
-   - You can explore the Jupyter notebooks provided in the `notebooks/` directory, which contain explanations, code, and examples.
-   - Alternatively, run the Python scripts in the `scripts/` directory for specific implementations.
+   - You can explore the Jupyter notebooks provided in the `notebooks/` directory, which contain explanations, code, and examples. If there are rendering problems within the Jupyter notebooks, have a look at the homonymous .pdf files in the same directory
+   - You can view the numerical method implementations in the Python scripts in the `methods/` directory, which contain class definitions and methods (with some helper functions mostly for visualisation)
 
-3. **Customize the Parameters:**
-   - Each method allows for customization of parameters like the number of time steps, volatility, risk-free rate, and more. Modify these parameters as needed within the scripts or notebooks.
+3. **Customise Option to be priced and Method Parameters:**
+   - Each method allows for customization of priced option and parameters like the number of time steps, volatility, risk-free rate, and more. Modify these parameters as needed within the scripts or notebooks.
 
 ## References
 
