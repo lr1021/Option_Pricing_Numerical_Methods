@@ -4,7 +4,7 @@ This repository contains implementations of numerical methods for option pricing
 
 ## Table of Contents
 - [Overview](#overview)
-- [Implemented Methods](#implemented-methods)
+- [Implemented Classes and Methods](#implemented-methods)
 - [Dependencies](#dependencies)
 - [Usage](#usage)
 - [References](#references)
