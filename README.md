@@ -43,14 +43,8 @@ To run the code in this repository, you need the following dependencies:
 - Python 3.x
 - NumPy
 - Pandas
-- Matplotlib (for plotting results)
+- Matplotlib
 - Jupyter (optional, for running notebooks)
-
-You can install these dependencies using pip:
-
-```bash
-pip install numpy pandas matplotlib jupyter
-```
 
 ## Usage
 
