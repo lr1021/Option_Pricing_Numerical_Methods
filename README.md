@@ -13,7 +13,7 @@ This repository contains implementations of numerical methods for option pricing
 ## Overview
 
 The purpose of this repository is to provide a practical implementation of various numerical methods for pricing options as described in Chapter 14: Numerical Procedures of John Hull's textbook *Options, Futures, and Other Derivatives*. These methods can be used to value derivative securities where analytical solutions may not be available or practical.
-In addition to this, hedge parameters such as delta, gamma, theta, vega and rho can be estimated using prices obtained numerically (by recomputing the desired option price with a small change in relevant variable) or with procedures specific to the used numerical method.
+In addition to this, hedge parameters such as delta, gamma, theta, vega and rho can be estimated using prices obtained numerically (by recomputing the desired option price with a small change in relevant varaible) or with procedures specific to the used numerical method.
 
 ### Key Topics:
 - Building Desired Option (To be implemented)
