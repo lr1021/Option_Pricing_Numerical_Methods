@@ -84,3 +84,7 @@ This textbook is a widely recognized reference for derivatives pricing and inclu
 Feel free to explore the provided notebooks that demonstrate how each method can be applied to price European and American options, as well as more complex derivatives.
 
 ---
+
+### License
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
+
