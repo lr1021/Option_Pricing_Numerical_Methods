@@ -15,7 +15,7 @@ The purpose of this repository is to provide a practical implementation of vario
 In addition to this, hedge parameters such as delta, gamma, theta, vega and rho can be estimated using prices obtained numerically (by recomputing the desired option price with a small change in relevant variable) or with procedures specific to the used numerical method.
 
 ### Key Topics:
-- Building Desired Option (To be implemented)
+- Building Desired Option
 - Binomial Tree
 - Implicit Finite Difference
 - Explicit Finite Difference (To be implemented)
@@ -42,7 +42,7 @@ The following have been implemented:
    the given option with simplified calculation (no inversion of matrices) based on
    assumption that first and second order partial derivatives of option price with respect to underlying asset price are very similar between adjacent time steps.
 
-5. **Monte Carlo Simulation**
+5. **Monte Carlo Simulation (To be implemented)**
    - A stochastic method used to simulate the underlying asset's price paths and calculate the price of the given option by taking the average of the final payoffs.
 
 ## Dependencies
