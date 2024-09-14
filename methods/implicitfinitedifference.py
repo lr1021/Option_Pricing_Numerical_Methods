@@ -241,3 +241,74 @@ class ImplicitFiniteDifference:
                     self.map[1:self.vsteps-1, i] = fcurr
 
         self.f = self.map[self.vsteps-int(self.S/self.valstep), 0]
+
+    def explicit_fit(self, S=None, Smax=None, fmax=None, fmin=None, r=None,
+                     q=None, sigma=None, option=None):
+
+        # if given new values, update ImplicitFiniteDifference attributes
+        if S:
+            self.S = S
+        if Smax:
+            self.Smax = Smax
+            self.det_Smax()
+        if fmax:
+            self.fmax = fmax
+        if fmin:
+            self.fmin = fmin
+        if r:
+            self.r = r
+        if q:
+            self.q = q
+        if sigma:
+            self.sigma = sigma
+        if option:
+            self.option = option
+
+        self.det_Smax()
+        self.load_map()
+        self.load_nodes()
+
+        a = [((j*self.timestep)/(1+self.r*self.timestep)) *
+             (-self.r+j*self.sigma**2)/2
+             for j in range(0, self.vsteps+1)]
+        b = [(1/(1+self.r*self.timestep))*(1-self.sigma**2*j**2*self.timestep)
+             for j in range(0, self.vsteps+1)]
+        c = [((j*self.timestep)/(1+self.r*self.timestep)) *
+             (self.r+j*self.sigma**2)/2
+             for j in range(0, self.vsteps+1)]
+
+        for i in reversed(range(0, self.tsteps+1)):
+            map = self.map.copy()
+            if i == self.tsteps:
+                for j in range(1, self.vsteps):
+                    payoff = self.nodes[(i, j)].intrinsic
+                    self.map[self.vsteps - j, i] = payoff
+            else:
+                fnext = map[1:-1, i+1]
+                # fnext[0] += -c[self.vsteps-1]*self.fmax
+                # fnext[-1] += -a[1]*self.fmin
+
+                M = np.zeros((self.vsteps-1, self.vsteps-1))
+                for row in range(0, self.vsteps-1):
+                    if row > 0:
+                        M[row, row-1] = c[self.vsteps-row-1]
+                    M[row, row] = b[self.vsteps-row-1]
+                    if row < self.vsteps-2:
+                        M[row, row+1] = a[self.vsteps-row-1]
+                fcurr = M @ fnext
+                fcurr[0] += c[self.vsteps-1]*self.fmax
+                fcurr[-1] += a[1]*self.fmin
+
+                if self.option.american:
+                    for j in range(1, self.vsteps):
+                        payoff = self.nodes[(i, j)].intrinsic
+                        if payoff > 0:
+                            self.map[self.vsteps - j, i] =\
+                                max(payoff, fcurr[self.vsteps-j-1])
+                        else:
+                            self.map[self.vsteps - j, i] =\
+                                fcurr[self.vsteps-j-1]
+                else:
+                    self.map[1:self.vsteps-1, i] = fcurr
+
+        self.f = self.map[self.vsteps-int(self.S/self.valstep), 0]

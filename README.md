@@ -18,7 +18,7 @@ In addition to this, hedge parameters such as delta, gamma, theta, vega and rho 
 - Building Desired Option
 - Binomial Tree
 - Implicit Finite Difference
-- Explicit Finite Difference (To be implemented)
+- Explicit Finite Difference
 - Monte Carlo Simulation (To be implemented)
 - Hedge Parameter Estimation (To be implemented)
 
@@ -37,7 +37,7 @@ The following have been implemented:
    - A numerical solution to the Black and Scholes differential equation to price
    the given option.
 
-4. **Explicit Finite Difference Method (To be implemented)**
+4. **Explicit Finite Difference Method**
    - A numerical solution to the Black and Scholes differential equation to price
    the given option with simplified calculation (no inversion of matrices) based on
    assumption that first and second order partial derivatives of option price with respect to underlying asset price are very similar between adjacent time steps.
