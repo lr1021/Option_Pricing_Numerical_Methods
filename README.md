@@ -19,7 +19,7 @@ In addition to this, hedge parameters such as delta, gamma, theta, vega and rho 
 - Binomial Tree
 - Implicit Finite Difference
 - Explicit Finite Difference
-- Monte Carlo Simulation (To be implemented)
+- Monte Carlo Simulation
 - Hedge Parameter Estimation (To be implemented)
 
 ## Implemented Classes and Methods
@@ -42,7 +42,7 @@ The following have been implemented:
    the given option with simplified calculation (no inversion of matrices) based on
    assumption that first and second order partial derivatives of option price with respect to underlying asset price are very similar between adjacent time steps.
 
-5. **Monte Carlo Simulation (To be implemented)**
+5. **Monte Carlo Simulation**
    - A stochastic method used to simulate the underlying asset's price paths and calculate the price of the given option by taking the average of the final payoffs.
 
 ## Dependencies
