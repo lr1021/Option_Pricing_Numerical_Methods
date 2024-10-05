@@ -2,6 +2,11 @@
 
 This repository contains implementations of numerical methods for option pricing, based on **Hull, J. C. (2003).** *Options, Futures, and Other Derivatives* (2nd ed.). Prentice-Hall, specifically Chapter 14: Numerical Procedures.
 
+<p float="left">
+  <img src="/README_files/finite_differences.png" width="50" />
+  <img src="/README_files/monte_carlo.png" width="50" /> 
+</p>
+
 ## Table of Contents
 - [Overview](#overview)
 - [Implemented Classes and Methods](#implemented-classes-and-methods)
